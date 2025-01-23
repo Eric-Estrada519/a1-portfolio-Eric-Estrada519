@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav{
+    background-color: rgba(136, 131, 131, 0.69);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+    display: flex;
+}
+
+nav a{
+    height: 100%;
+    padding: 1em 2em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: background-color 150ms ease;
+}
+
+nav a:hover{
+    background-color: white;
+}
+
+nav li:first-child{
+    margin-right:auto;
+}
+
+nav a.active-link{
+    border-bottom: 2px solid black;
+}
+nav a.accent-link{
+    background-color: rgba(51, 47, 47, 0.42);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(64, 60, 60, 0.42);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: right 300ms ease-out;
+}
+.sidebar li {
+    width: 100%;
+
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+.menu-button{
+    display: none;
+    height: 100%;
+    padding: 10px 20px;
+    text-decoration: none;
+    align-items: center;
+    color: black;
+}
+
+@media(max-width: 1024px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+
+
+.center{
+    object-fit: cover;
+    object-position: center center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 5vh;
+
+}
+
+.resume {
+    display: flex;
+    object-fit: cover;
+    object-position: center center;
+    margin-top: 5vh;
+}
